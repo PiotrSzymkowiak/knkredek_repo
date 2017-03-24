@@ -1,0 +1,10 @@
+B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1\bin\Debug\PiotrSzymkowiakLab1.exe.config
+B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1\bin\Debug\PiotrSzymkowiakLab1.exe
+B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1\bin\Debug\PiotrSzymkowiakLab1.pdb
+B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1\obj\Debug\PiotrSzymkowiakLab1.csprojResolveAssemblyReference.cache
+B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1\obj\Debug\PiotrSzymkowiakLab1.Properties.Resources.resources
+B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1\obj\Debug\PiotrSzymkowiakLab1.csproj.GenerateResource.Cache
+B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1\obj\Debug\PiotrSzymkowiakLab1.exe
+B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1\obj\Debug\PiotrSzymkowiakLab1.pdb
+B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1\obj\Debug\PiotrSzymkowiakLab1.FormLogged.resources
+B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1\obj\Debug\PiotrSzymkowiakLab1.FormLogin.resources

@@ -1,0 +1,9 @@
+B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1Zad2\bin\Debug\PiotrSzymkowiakLab1Zad2.exe.config
+B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1Zad2\bin\Debug\PiotrSzymkowiakLab1Zad2.exe
+B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1Zad2\bin\Debug\PiotrSzymkowiakLab1Zad2.pdb
+B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1Zad2\obj\Debug\PiotrSzymkowiakLab1Zad2.csprojResolveAssemblyReference.cache
+B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1Zad2\obj\Debug\PiotrSzymkowiakLab1Zad2.FormZad2.resources
+B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1Zad2\obj\Debug\PiotrSzymkowiakLab1Zad2.Properties.Resources.resources
+B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1Zad2\obj\Debug\PiotrSzymkowiakLab1Zad2.csproj.GenerateResource.Cache
+B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1Zad2\obj\Debug\PiotrSzymkowiakLab1Zad2.exe
+B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1Zad2\obj\Debug\PiotrSzymkowiakLab1Zad2.pdb
