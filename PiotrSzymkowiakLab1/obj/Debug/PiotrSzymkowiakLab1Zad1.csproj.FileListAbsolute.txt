@@ -1,0 +1,2 @@
+B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\knkredek_repo\PiotrSzymkowiakLab1\bin\Debug\PiotrSzymkowiakLab1.exe.config
+B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\knkredek_repo\PiotrSzymkowiakLab1\obj\Debug\PiotrSzymkowiakLab1.pdb
