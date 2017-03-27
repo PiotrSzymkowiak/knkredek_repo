@@ -10,18 +10,18 @@ using System.Windows.Forms;
 
 namespace PiotrSzymkowiakLab1Zad2
 {
-    public partial class FormZad2 : Form
+    public partial class FormGame : Form
     {
-        private int tickAmountMax;
-        private int tickAmount;
-        private int clickMaximumCount;
+        private int tickAmountMaximum;
+        private int tickCount;
+        private int clickAmountMaximum;
         private int clickCount;
-        private int wrongClickAmountMaxiumumCount;
-        private int wrongClickAmountCount;
+        private int wrongClickAmountMaxiumum;
+        private int wrongClickCount;
         private int numberOfWrongButtons;
         private List<Button> listOfWrongButtons = new List<Button>();
         Random random = new Random();
-        public FormZad2()
+        public FormGame()
         {
             InitializeComponent();
         }
@@ -41,7 +41,7 @@ namespace PiotrSzymkowiakLab1Zad2
         }
 
         /// <summary>
-        /// Inicjalizuje ustawienia gry w zależności od wybranego poziomu trudności.
+        /// Inicjalizuje ustawienia gry biorąc pod uwagę wybrany poziom trudności.
         /// </summary>
         private void GameInitialization()
         {
@@ -58,15 +58,19 @@ namespace PiotrSzymkowiakLab1Zad2
                 SetGameSettings(10, 20, 4, 20);
             }
 
-            progressBarOfGameCompletion.Maximum = clickMaximumCount;
+            progressBarOfGameCompletion.Maximum = clickAmountMaximum;
+            
             ProduceWrongButtons();
             SetRandomButtonPosition(ref buttonClickMe);                                  
-            labelTickAmountMax.Text = $"0/{tickAmountMax.ToString()}";
-            labelOfWrongClicks.Text = $"Wrong clicks: 0/{wrongClickAmountMaxiumumCount}";
+            labelTickAmountMax.Text = $"Seconds: 0/{tickAmountMaximum.ToString()}";
+            labelOfWrongClicks.Text = $"Wrong clicks: 0/{wrongClickAmountMaxiumum}";
+            buttonStart.Hide();
+            diffuciltyToolStripMenuItem.Visible = false;
+            labelTickAmountMax.Visible = true;
+            labelOfWrongClicks.Visible = true;         
+            gamePanel.Visible = true;
             gameTimer.Interval = 1000;
             gameTimer.Start();
-            buttonStart.Hide();
-            gamePanel.Visible = true;
         }
         /// <summary>
         /// Pozwala ustawić podstawowe atrybuty gry.
@@ -81,9 +85,9 @@ namespace PiotrSzymkowiakLab1Zad2
             {
                 return;
             }
-            clickMaximumCount = clickmaxcount;
-            tickAmountMax = tickamountmax;
-            wrongClickAmountMaxiumumCount = wrongclickmax;
+            clickAmountMaximum = clickmaxcount;
+            tickAmountMaximum = tickamountmax;
+            wrongClickAmountMaxiumum = wrongclickmax;
             numberOfWrongButtons = numberofwrongbuttons;
         }
 
@@ -140,8 +144,8 @@ namespace PiotrSzymkowiakLab1Zad2
         private void gameTimer_Tick(object sender, EventArgs e)
         {            
             RandomizeButtonsPositions();
-            tickAmount++;
-            labelTickAmountMax.Text = $"{tickAmount}/{tickAmountMax}";
+            tickCount++;
+            labelTickAmountMax.Text = $"Seconds: {tickCount}/{tickAmountMaximum}";
             buttonClickMe.Enabled = true;
             CheckLoseOrWinConditions();
         }
@@ -178,8 +182,8 @@ namespace PiotrSzymkowiakLab1Zad2
         /// <param name="e"></param>
         private void WrongButtonClick(object sender, EventArgs e)
         {            
-            wrongClickAmountCount++;                       
-            labelOfWrongClicks.Text = $"Wrong clicks: {wrongClickAmountCount}/{wrongClickAmountMaxiumumCount}";
+            wrongClickCount++;                       
+            labelOfWrongClicks.Text = $"Wrong clicks: {wrongClickCount}/{wrongClickAmountMaxiumum}";
             CheckLoseOrWinConditions(); 
         }
         /// <summary>
@@ -206,19 +210,17 @@ namespace PiotrSzymkowiakLab1Zad2
         /// </summary>
         private void CheckLoseOrWinConditions()
         {
-            if (clickCount >= clickMaximumCount)
+            if (clickCount >= clickAmountMaximum)
             {
-               StopGameAndShowMessage($"You win! You have clicked for {clickCount} times in {tickAmount} tick's", "You win!");
+               StopGameAndShowMessage($"You win! You have clicked for {clickCount} times and needed for it {tickCount} seconds :D", "You win!");
             }
-            else if (wrongClickAmountCount >= wrongClickAmountMaxiumumCount)
+            else if (wrongClickCount >= wrongClickAmountMaxiumum)
             {
-               StopGameAndShowMessage("You lose!", "You lose!");
-                return;
+               StopGameAndShowMessage("You lose! Too many wrong clicks... :(", "You lose!");
             }
-            else if (tickAmount >= tickAmountMax)
+            else if (tickCount >= tickAmountMaximum)
             {
-                StopGameAndShowMessage("You lose!", "You lose!");
-                return;
+                StopGameAndShowMessage("You lose! Time has run out :/", "You lose!");
             }            
         }
 
@@ -247,15 +249,18 @@ namespace PiotrSzymkowiakLab1Zad2
         private void GameRestart()
         {
             gamePanel.Visible = false;
+            diffuciltyToolStripMenuItem.Visible = true;
+            labelTickAmountMax.Visible = false;
+            labelOfWrongClicks.Visible = false;
             buttonStart.Show();
             gamePanel.Controls.Clear();
             gamePanel.Controls.Add(buttonClickMe);
             DifficultySettingsLikeRadioButtons("medium");
             progressBarOfGameCompletion.Value = 0;       
             listOfWrongButtons.Clear();
-            tickAmount = 0;
+            tickCount = 0;
             clickCount = 0;
-            wrongClickAmountCount = 0;
+            wrongClickCount = 0;
         }
 
     }

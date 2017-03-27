@@ -16,7 +16,7 @@ namespace PiotrSzymkowiakLab1Zad2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormZad2());
+            Application.Run(new FormGame());
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace PiotrSzymkowiakLab1Zad2
 {
-    partial class FormZad2
+    partial class FormGame
     {
         /// <summary>
         /// Required designer variable.
@@ -52,6 +52,7 @@
             this.progressBarOfGameCompletion.Name = "progressBarOfGameCompletion";
             this.progressBarOfGameCompletion.Size = new System.Drawing.Size(260, 23);
             this.progressBarOfGameCompletion.TabIndex = 0;
+            this.progressBarOfGameCompletion.Tag = "";
             // 
             // buttonStart
             // 
@@ -87,8 +88,9 @@
             // 
             this.easyToolStripMenuItem.CheckOnClick = true;
             this.easyToolStripMenuItem.Name = "easyToolStripMenuItem";
-            this.easyToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.easyToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.easyToolStripMenuItem.Text = "Easy";
+            this.easyToolStripMenuItem.ToolTipText = "Clicks = 3\r\nWrong Clicks = 2\r\nSeconds = 6";
             this.easyToolStripMenuItem.Click += new System.EventHandler(this.easyToolStripMenuItem_Click);
             // 
             // mediumToolStripMenuItem
@@ -97,16 +99,18 @@
             this.mediumToolStripMenuItem.CheckOnClick = true;
             this.mediumToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.mediumToolStripMenuItem.Name = "mediumToolStripMenuItem";
-            this.mediumToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.mediumToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.mediumToolStripMenuItem.Text = "Medium";
+            this.mediumToolStripMenuItem.ToolTipText = "Clicks = 6\r\nWrong Clicks = 3\r\nSeconds = 12";
             this.mediumToolStripMenuItem.Click += new System.EventHandler(this.mediumToolStripMenuItem_Click);
             // 
             // hardToolStripMenuItem
             // 
             this.hardToolStripMenuItem.CheckOnClick = true;
             this.hardToolStripMenuItem.Name = "hardToolStripMenuItem";
-            this.hardToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.hardToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.hardToolStripMenuItem.Text = "Hard";
+            this.hardToolStripMenuItem.ToolTipText = "Clicks = 10\r\nWrong Clicks = 4\r\nSeconds = 20";
             this.hardToolStripMenuItem.Click += new System.EventHandler(this.hardToolStripMenuItem_Click);
             // 
             // buttonClickMe
@@ -129,11 +133,12 @@
             // labelTickAmountMax
             // 
             this.labelTickAmountMax.AutoSize = true;
-            this.labelTickAmountMax.Location = new System.Drawing.Point(248, 9);
+            this.labelTickAmountMax.Location = new System.Drawing.Point(188, 9);
             this.labelTickAmountMax.Name = "labelTickAmountMax";
-            this.labelTickAmountMax.Size = new System.Drawing.Size(24, 13);
+            this.labelTickAmountMax.Size = new System.Drawing.Size(84, 13);
             this.labelTickAmountMax.TabIndex = 4;
-            this.labelTickAmountMax.Text = "0/0";
+            this.labelTickAmountMax.Text = "Seconds: 00/00";
+            this.labelTickAmountMax.Visible = false;
             // 
             // gamePanel
             // 
@@ -148,29 +153,30 @@
             // labelOfWrongClicks
             // 
             this.labelOfWrongClicks.AutoSize = true;
-            this.labelOfWrongClicks.Location = new System.Drawing.Point(142, 9);
+            this.labelOfWrongClicks.Location = new System.Drawing.Point(12, 11);
             this.labelOfWrongClicks.Name = "labelOfWrongClicks";
             this.labelOfWrongClicks.Size = new System.Drawing.Size(92, 13);
             this.labelOfWrongClicks.TabIndex = 7;
             this.labelOfWrongClicks.Text = "Wrong clicks: 0/0";
+            this.labelOfWrongClicks.Visible = false;
             // 
-            // FormZad2
+            // FormGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.labelOfWrongClicks);
-            this.Controls.Add(this.gamePanel);
             this.Controls.Add(this.labelTickAmountMax);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.progressBarOfGameCompletion);
             this.Controls.Add(this.menuStripOfTheGame);
+            this.Controls.Add(this.gamePanel);
             this.MainMenuStrip = this.menuStripOfTheGame;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(300, 300);
             this.MinimumSize = new System.Drawing.Size(300, 300);
-            this.Name = "FormZad2";
-            this.Text = "FormZad2";
+            this.Name = "FormGame";
+            this.Text = "Click for you life!";
             this.menuStripOfTheGame.ResumeLayout(false);
             this.menuStripOfTheGame.PerformLayout();
             this.gamePanel.ResumeLayout(false);
