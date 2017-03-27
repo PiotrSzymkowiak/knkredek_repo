@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PiotrSzymkowiakLab1Zad1", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PiotrSzymkowiakLab1Zad2", "PiotrSzymkowiakLab1Zad2\PiotrSzymkowiakLab1Zad2.csproj", "{B9E247FB-60B7-4294-8526-CF725196B16F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PiotrSzymkowiakLab1Zad3", "PiotrSzymkowiakLab1Zad3\PiotrSzymkowiakLab1Zad3.csproj", "{7BE585C1-48EE-4FEB-BD60-B9AA4188A313}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B9E247FB-60B7-4294-8526-CF725196B16F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B9E247FB-60B7-4294-8526-CF725196B16F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B9E247FB-60B7-4294-8526-CF725196B16F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BE585C1-48EE-4FEB-BD60-B9AA4188A313}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BE585C1-48EE-4FEB-BD60-B9AA4188A313}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BE585C1-48EE-4FEB-BD60-B9AA4188A313}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BE585C1-48EE-4FEB-BD60-B9AA4188A313}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
