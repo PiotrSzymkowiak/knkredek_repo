@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace PiotrSzymkowiakLab2Zad2
 {
     class Car : Vehicle
@@ -15,14 +10,10 @@ namespace PiotrSzymkowiakLab2Zad2
             Brand = "unknown";          
         }
 
-        public Car(string brand, float maxSpeed, float acceleration)
-        {
-            Brand = brand;
-            MaxSpeed = maxSpeed;
-            Speed = 0;
-            Acceleration = acceleration;
-            _numberOfWheels = 4;
-            _isBroken = false;                        
+        public Car(string brand, float maxSpeed, float acceleration) : base(maxSpeed, acceleration)
+        {           
+            Brand = brand;                 
+            numberOfWheels = 4;                       
         }
 
         public override string ToString()

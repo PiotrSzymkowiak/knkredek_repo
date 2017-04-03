@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PiotrSzymkowiakLab2Zad2
 {
@@ -11,12 +7,13 @@ namespace PiotrSzymkowiakLab2Zad2
 
     class Vehicle : IMovable
     {
-        protected float _speed;
-        protected float _maxSpeed;
-        protected bool _isBroken;
-        protected int _numberOfWheels;
-        protected float _quality;
-        protected float _acceleration;
+        private float speed;
+        private float maxSpeed;
+        private float quality;
+        private float acceleration;
+        protected bool isBroken { get; set; }
+        protected int numberOfWheels { get; set; }
+
 
         public event CrashedEventHandler Crashed;
         public event RepairedEventHandler Repaired;
@@ -24,13 +21,16 @@ namespace PiotrSzymkowiakLab2Zad2
         {
             get
             {
-                return _speed;
+                return speed;
             }
 
             set
             {
-                if ( value < 0 ) return;
-                _speed = value;
+                if (value < 0)
+                {
+                    return;
+                }
+                speed = value;
             }
         }
 
@@ -38,13 +38,16 @@ namespace PiotrSzymkowiakLab2Zad2
         {
             get
             {
-                return _acceleration;
+                return acceleration;
             }
 
             protected set
             {
-                if (value < 0) return;
-                _acceleration = value;
+                if (value < 0)
+                {
+                    return;
+                }
+                acceleration = value;
             }
         }
 
@@ -52,52 +55,64 @@ namespace PiotrSzymkowiakLab2Zad2
         {
             get
             {
-                return _quality;
+                return quality;
             }
             protected set
             {
-                if (value < 0 || value > 100) return;
-                _quality = value;
+                if (value < 0 || value > 100)
+                {
+                    return;
+                }
+                quality = value;
             }
         }        
 
         public float MaxSpeed
         {
-            get { return _maxSpeed; }
+            get { return maxSpeed; }
             protected set
             {
-                if ( _maxSpeed < 0 ) return;
-                _maxSpeed = value;
+                if (maxSpeed < 0)
+                {
+                    return;
+                }
+                maxSpeed = value;
             }
         }
 
+        public Vehicle(float maxSpeed, float acceleration)
+        {
+            MaxSpeed = maxSpeed;
+            Acceleration = acceleration;
+            Quality = 100;
+            isBroken = false;
+            Speed = 0;
+        }
 
         public Vehicle()
         {
-            _numberOfWheels = 4;
             Quality = 100;
             Speed = 0;
-            _isBroken = false;
+            isBroken = false;
             MaxSpeed = 100;
             Acceleration = 5;
         }
 
-
         protected virtual void OnCrash(EventArgs e)
         {
             if(Crashed != null)                          
-                Crashed(this, e);           
+                Crashed.Invoke(this, e);           
         }
 
         protected virtual void OnRepair(EventArgs e)
         {
-            if (Crashed != null)
-                Repaired(this, e);
+            if (Repaired != null)
+                Repaired.Invoke(this, e);
         }
 
         public void Crash()
         {
-            _isBroken = true;
+            isBroken = true;
             Speed = 0;
             OnCrash(EventArgs.Empty);
         }
@@ -105,7 +120,10 @@ namespace PiotrSzymkowiakLab2Zad2
         public void Repair()
         {
             QualityDecreasing();
-            if(Quality > 0) _isBroken = false;         
+            if (Quality > 0)
+            {
+                isBroken = false;
+            }         
             OnRepair(EventArgs.Empty);
         }
 
@@ -113,7 +131,10 @@ namespace PiotrSzymkowiakLab2Zad2
         {
             Random random = new Random();
             float qualityDecreasingAmount = (float)random.NextDouble() * 50 + 1;
-            if (!CanBeRepaired(qualityDecreasingAmount)) Quality = 0;
+            if (!CanBeRepaired(qualityDecreasingAmount))
+            {
+                Quality = 0;
+            }
             else
             {
                 Quality -= qualityDecreasingAmount;
@@ -122,14 +143,30 @@ namespace PiotrSzymkowiakLab2Zad2
 
         private bool CanBeRepaired(float qualityDecreasingAmount)
         {
-            if (Quality - qualityDecreasingAmount <= 0) return false;
-            else return true;
+            if (Quality - qualityDecreasingAmount <= 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
         public void SpeedUp()
         {
-            if (_isBroken == true) return;
-            if (Speed + Acceleration >= MaxSpeed) Speed = MaxSpeed;
-            else Speed += Acceleration;
+            if (isBroken)
+            {
+                return;
+            }
+
+            if (Speed + Acceleration >= MaxSpeed)
+            {
+                Speed = MaxSpeed;
+            }
+            else
+            {
+                Speed += Acceleration;
+            }
         }
 
         public void SlowDown()
@@ -139,8 +176,14 @@ namespace PiotrSzymkowiakLab2Zad2
 
         public void Move()
         {
-            if( _isBroken == true ) Console.WriteLine($"{this.ToString()} is broken, can't move");
-            else Console.WriteLine($"{this.ToString()} is moving with speed of {Speed}/{MaxSpeed}");
+            if (isBroken)
+            {
+                Console.WriteLine($"{this.ToString()} is broken, can't move");
+            }
+            else
+            {
+                Console.WriteLine($"{this.ToString()} is moving with speed of {Speed}/{MaxSpeed}");
+            }
         }
 
         public override string ToString()
