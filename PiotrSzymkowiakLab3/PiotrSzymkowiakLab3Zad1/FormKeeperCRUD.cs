@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PiotrSzymkowiakLab3Zad1
@@ -15,6 +8,12 @@ namespace PiotrSzymkowiakLab3Zad1
     {
         private readonly SqlConnection sqlConnection;
         private readonly DataGridView dataGridView;
+        /// <summary>
+        /// Konstruktor okna służącego do edycji rekordów tabeli Opiekun
+        /// </summary>
+        /// <param name="sqlConnection"></param>
+        /// <param name="dataGridView"></param>
+        /// <param name="panelType"></param>
         public FormKeeperCRUD(SqlConnection sqlConnection, DataGridView dataGridView, string panelType)
         {
             InitializeComponent();
@@ -27,6 +26,10 @@ namespace PiotrSzymkowiakLab3Zad1
             ShowAdequatePanel(panelType);
         }
 
+        /// <summary>
+        /// Ustala który panel do edycji opiekuna ma być dostępny
+        /// </summary>
+        /// <param name="panelType"></param>
         private void ShowAdequatePanel(string panelType)
         {
             switch (panelType)
@@ -48,6 +51,11 @@ namespace PiotrSzymkowiakLab3Zad1
             }
         }
 
+        /// <summary>
+        /// Przycisk potwierdzający dodanie rekordu do tabeli Opiekun
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonConfirm_Click(object sender, EventArgs e)
         {
             if (textBoxName.Text == "" || textBoxSurname.Text == "" || textBoxPESEL.Text == "")
@@ -60,6 +68,11 @@ namespace PiotrSzymkowiakLab3Zad1
             this.Dispose();
         }
 
+        /// <summary>
+        /// Przycisk potwierdzający usunięcie rekordu z tabeli Opiekun
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonDelete_Click(object sender, EventArgs e)
         {
 
@@ -67,6 +80,11 @@ namespace PiotrSzymkowiakLab3Zad1
             this.Dispose();
         }
 
+        /// <summary>
+        /// Przycisk potwierdzający edycję rekordu w tabeli Opiekun
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
 
