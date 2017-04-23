@@ -1,8 +1,0 @@
-B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1Zad2\bin\Release\PiotrSzymkowiakLab1Zad2.exe.config
-B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1Zad2\bin\Release\PiotrSzymkowiakLab1Zad2.exe
-B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1Zad2\bin\Release\PiotrSzymkowiakLab1Zad2.pdb
-B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1Zad2\obj\Release\PiotrSzymkowiakLab1Zad2.FormZad2.resources
-B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1Zad2\obj\Release\PiotrSzymkowiakLab1Zad2.Properties.Resources.resources
-B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1Zad2\obj\Release\PiotrSzymkowiakLab1Zad2.csproj.GenerateResource.Cache
-B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1Zad2\obj\Release\PiotrSzymkowiakLab1Zad2.exe
-B:\Piotrek\Inf\C#\PiotrSzymkowiakLab1\PiotrSzymkowiakLab1Zad2\obj\Release\PiotrSzymkowiakLab1Zad2.pdb
