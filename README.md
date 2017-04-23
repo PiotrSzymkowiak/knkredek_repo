@@ -1,2 +1,2 @@
 # knkredek_repo
-private repository for the coures in C# by kredek on PWr
+private repository for C# course by kredek on PWr
